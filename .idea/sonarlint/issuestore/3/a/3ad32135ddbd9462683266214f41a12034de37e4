@@ -1,0 +1,15 @@
+
+e
+java:S3655o"HCall "cart.isPresent()" or "!cart.isEmpty()" before accessing the value.(È–Ãô8µò¸È¯1
+^	java:S125à"<This block of commented-out lines of code should be removed.(¦ìñıÿÿÿÿ8¼Ä·È¯1
+Y	java:S125"<This block of commented-out lines of code should be removed.(Ø½Ô8¼Ä·È¯1
+^	java:S125"<This block of commented-out lines of code should be removed.(×Åâåüÿÿÿÿ8½Ä·È¯1
+Y	java:S125—"<This block of commented-out lines of code should be removed.(œÔÀ’8½Ä·È¯1
+^	java:S125¦"<This block of commented-out lines of code should be removed.(æé¨ÿÿÿÿÿ8¾Ä·È¯1
+^	java:S125µ"<This block of commented-out lines of code should be removed.(¬…õ°üÿÿÿÿ8ÈÄ·È¯1
+`
+java:S1128	">Remove this unused import 'org.jetbrains.annotations.NotNull'.(éš®ïøÿÿÿÿ8Æ›Ô¯1
+[
+java:S1128"9Remove this unused import 'org.springframework.ui.Model'.(ê†ıÿÿÿÿ8Æ›Ô¯1
+R
+java:S1128"0Remove this unused import 'java.time.LocalDate'.(›‘¬èıÿÿÿÿ8Æ›Ô¯1

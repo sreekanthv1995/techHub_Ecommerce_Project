@@ -1,0 +1,19 @@
+
+l
+java:S1192"ODefine a constant instead of duplicating this literal "categories-add" 3 times.(‹³Ú¾8ÚîÍ„¯1
+j
+java:S1192'"MDefine a constant instead of duplicating this literal "errorMessage" 4 times.(æĞŠ8ÚîÍ„¯1
+}
+java:S11922"[Define a constant instead of duplicating this literal "redirect:/admin/categories" 3 times.(¾êÃùÿÿÿÿ8ÚîÍ„¯1
+h
+java:S1192"KDefine a constant instead of duplicating this literal "categories" 4 times.(Š”šÜ8ÚîÍ„¯1
+b
+java:S4684#"@Replace this persistent entity with a simple POJO or DTO object.(¥ùƒöúÿÿÿÿ8ÑïÍ„¯1
+\
+java:S46847"@Replace this persistent entity with a simple POJO or DTO object.(Š‚¨=8ÔïÍ„¯1
+]
+java:S4684Y"@Replace this persistent entity with a simple POJO or DTO object.(ö¯®á8˜™Ï„¯1
+o
+java:S6204c"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(–Ó­8ÚïÍ„¯1
+]
+java:S1128"@Remove this unused import 'com.tech_hub.techhub.dto.ProductDto'.(ÊÓ÷ÿ8Ûèå„¯1

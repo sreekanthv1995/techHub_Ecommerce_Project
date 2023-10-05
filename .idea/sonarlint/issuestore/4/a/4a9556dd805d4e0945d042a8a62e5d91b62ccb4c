@@ -1,0 +1,16 @@
+
+d
+java:S2259/"BA "NullPointerException" could be thrown; "user" is nullable here.(Æÿß½üÿÿÿÿ8Ž¼Ï†¯1
+L	java:S106-"+Replace this use of System.out by a logger.(Òâã°úÿÿÿÿ8“¼Ï†¯1
+L	java:S106/"+Replace this use of System.out by a logger.(Æÿß½üÿÿÿÿ8”¼Ï†¯1
+o
+java:S6204="RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹8–¼Ï†¯1
+b
+java:S4684Q"@Replace this persistent entity with a simple POJO or DTO object.(Þ‡ƒ–ÿÿÿÿÿ8›¼Ï†¯1
+^	java:S125•"<This block of commented-out lines of code should be removed.(Œì²Üüÿÿÿÿ8 ¼Ï†¯1
+R
+java:S1128"0Remove this unused import 'java.time.LocalDate'.(›‘¬èýÿÿÿÿ8õ—Ð†¯1
+V
+java:S1128"4Remove this unused import 'java.time.LocalDateTime'.(æÃ§ƒüÿÿÿÿ8ö—Ð†¯1
+W
+java:S1128":Remove this unused import 'java.time.temporal.ChronoUnit'.(Á…§8÷—Ð†¯1
