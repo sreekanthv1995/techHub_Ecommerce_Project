@@ -42,9 +42,7 @@ public class UserController {
 
     @GetMapping("/user-home")
     public String showUserProfile(Model model){
-        System.out.println(getCurrentUserName());
         UserEntity user = userService.findByUsername(getCurrentUserName()).orElse(null);
-        System.out.println(user.getUsername());
         model.addAttribute("user",user);
         return "user/user-dashboard";
     }
@@ -128,30 +126,3 @@ public class UserController {
         return "redirect:/user/view-order/" + orderId;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//    @PostMapping("/change-password")
-//    public String changePassword(@RequestParam String currentPassword, @RequestParam String newPassword, Principal principal) throws PasswordChangeException{
-//        String username = principal.getName();
-//        try {
-//            userService.changePassword(username, currentPassword, newPassword);
-//            return "redirect:/user/user-home";
-//        } catch (PasswordChangeException e) {
-//            return "redirect:/change-password?error=" + e.getMessage();
-//        }
-//    }

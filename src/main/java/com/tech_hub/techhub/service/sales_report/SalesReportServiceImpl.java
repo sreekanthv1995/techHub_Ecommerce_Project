@@ -157,17 +157,6 @@ public class SalesReportServiceImpl implements SalesReportService{
         return getSalesDto(oneYearAgo, today, totalRevenue, totalOrderCount,dailyOrderCount);
     }
 
-//    @NotNull
-//    private static SalesDto getSalesDto(LocalDate oneYearAgo, LocalDate today, Map<LocalDate, Long> dailyOrderCount,
-//                                        Double totalRevenue, Integer totalOrderCount) {
-//        SalesDto salesDto = new SalesDto();
-//        salesDto.setStartDate(oneYearAgo);
-//        salesDto.setEndDate(today);
-//        salesDto.setTotalOrderCount(totalOrderCount);
-//        salesDto.setTotalRevenue(totalRevenue);
-//        salesDto.setDailyOrderCounts(dailyOrderCount);
-//        return salesDto;
-//    }
 
     @Override
     public SalesDto getSalesForAllTime() {

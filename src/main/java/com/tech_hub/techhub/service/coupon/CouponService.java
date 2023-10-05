@@ -16,6 +16,4 @@ public interface CouponService {
 
     Coupon findByCouponCode(String couponCode);
     boolean couponIsApplicable(Coupon coupon,double totalPrice);
-
-//    void decreaseStock(Coupon coupon);
 }

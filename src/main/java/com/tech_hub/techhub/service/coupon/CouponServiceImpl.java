@@ -73,13 +73,4 @@ public class CouponServiceImpl implements CouponService{
                 coupon.getCouponStock() > 0 && totalPrice >=coupon.getMaxAmount();
     }
 
-//    @Override
-//    public void decreaseStock(Coupon coupon) {
-//        Optional<Coupon> optionalCoupon = couponRepository.findById(coupon.getId());
-//        if (optionalCoupon.isPresent()){
-//            Coupon coupon1 = optionalCoupon.get();
-//            coupon1.setCouponStock(coupon1.getCouponStock()-1);
-//        }
-//
-//    }
 }

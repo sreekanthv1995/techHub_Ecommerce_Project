@@ -30,9 +30,7 @@ public class EmailUtil {
         </div>
         """.formatted(otp, email, otp);
            mimeMessageHelper.setText(emailContent,true);
-
-        System.out.println(mimeMessage);
-        javaMailSender.send(mimeMessage);
+           javaMailSender.send(mimeMessage);
 
     }
 
@@ -51,8 +49,6 @@ public class EmailUtil {
             <p>Thank you!</p>
         </div>
         """.formatted(email),true);
-
-        System.out.println(mimeMessage);
         javaMailSender.send(mimeMessage);
 
     }

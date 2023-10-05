@@ -1,7 +1,6 @@
 package com.tech_hub.techhub.controller;
 
 import com.tech_hub.techhub.dto.UserDto;
-import com.tech_hub.techhub.entity.UserEntity;
 import com.tech_hub.techhub.service.user.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
@@ -14,7 +13,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import javax.servlet.http.HttpSession;
-import java.util.Optional;
 
 @Controller
 public class LoginController {

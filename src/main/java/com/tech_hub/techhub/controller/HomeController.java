@@ -1,6 +1,4 @@
 package com.tech_hub.techhub.controller;
-
-import com.tech_hub.techhub.entity.Offer;
 import com.tech_hub.techhub.entity.Products;
 import com.tech_hub.techhub.entity.Category;
 import com.tech_hub.techhub.entity.Variant;

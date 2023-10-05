@@ -6,15 +6,12 @@ import com.tech_hub.techhub.repository.CartRepository;
 import com.tech_hub.techhub.repository.UserRepository;
 import com.tech_hub.techhub.service.user.UserService;
 import com.tech_hub.techhub.service.variant.VariantService;
-import org.jetbrains.annotations.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-import org.springframework.ui.Model;
 
-import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -178,141 +175,3 @@ public class CartServiceImpl implements CartService {
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//    @Override
-//    public void increaseQuantity(Long id) {
-//        UserEntity user = userService.findByUsername(getCurrentUserName()).orElseThrow(()->new RuntimeException("User not found"));
-//        Cart cart = cartRepository.findByUser(user).orElseGet(()->createCart(user));
-//        CartItems cartItem =cart.getCartItems().stream()
-//                .filter(cartItems -> cartItems.getVariant().getId().equals(id))
-//                .findFirst().orElse(null);
-//        assert cartItem != null;
-//        cartItem.setQuantity(cartItem.getQuantity()+1);
-//        cartItemRepository.save(cartItem);
-//
-//    }
-//    @Override
-//    public void decreaseQuantity(Long id) {
-//        UserEntity user = userService.findByUsername(getCurrentUserName()).orElseThrow(()
-//                ->new RuntimeException("User not found"));
-//        Cart cart = cartRepository.findByUser(user).orElseGet(()->createCart(user));
-//        CartItems cartItem =cart.getCartItems().stream()
-//                .filter(cartItems -> cartItems.getVariant().getId().equals(id))
-//                .findFirst().orElse(null);
-//
-//
-//        assert cartItem != null;
-//        int newQuantity = cartItem.getQuantity()-1;
-//        if (newQuantity > 0){
-//            cartItem.setQuantity(newQuantity);
-//            cartItemRepository.save(cartItem);
-//        }else {
-//            cartItemRepository.delete(cartItem);
-//        }
-//
-//    }
-
-//    @Override
-//    public Cart updateCartItem(Variant variant, int quantity, String username) {
-//        UserEntity user = userService.findByUsername(username).get();
-//        Cart cart = user.getCart();
-//        List<CartItems>cartItems = cart.getCartItems();
-//        CartItems item = find(cartItems,variant.getId());
-//        item.setQuantity(quantity);
-//        cartItemRepository.save(item);
-//        cart.setCartItems(cartItems);
-//        float totalPrice = totalPrice(cartItems);
-//        cart.setTotalPrice(totalPrice);
-//        cart.setTotalItems(cart.getTotalItems());
-//        return cartRepository.save(cart);
-//    }
-
-//    private float totalPrice(List<CartItems> cartItems) {
-//        float totalPrice = 0.0F;
-//        for (CartItems items : cartItems){
-//            totalPrice += items.getUnitPrice()*items.getQuantity();
-//        }
-//        return totalPrice;
-//    }
-
-//    private CartItems find(List<CartItems> cartItems, Long id) {
-//        if (cartItems == null){
-//            return null;
-//        }
-//        CartItems cartItem = null;
-//        for (CartItems item : cartItems){
-//            if (item.getVariant().getId() == id){
-//                cartItem = item;
-//            }
-//        }
-//        return cartItem;
-//    }
-
-
-//    @Override
-//    public void updateCartItem(Long id,int newQuantity) {
-//        CartItems cartItem = cartItemRepository.findById(id).orElse(null);
-//        try{
-//            if (cartItem != null){
-//                cartItem.setQuantity(newQuantity);
-//                float newTotal = cartItem.getVariant().getPrice() * newQuantity;
-//                cartItem.setTotalPrice(newTotal);
-//                cartItemRepository.save(cartItem);
-//                recalculateTotalCartPrice(cartItem.getCart());
-//            }
-//        }catch (Exception e){
-//            e.printStackTrace();
-//        }
-//    }
-
-//    private void recalculateTotalCartPrice(Cart cart) {
-//        List<CartItems> cartItems = cart.getCartItems();
-//        float totalCartPrice = 0;
-//        for (CartItems cartItem : cartItems) {
-//            totalCartPrice += cartItem.getUnitPrice();
-//        }
-//        cart.setTotalPrice(totalCartPrice);
-//        cartRepository.save(cart);
-//    }
-
