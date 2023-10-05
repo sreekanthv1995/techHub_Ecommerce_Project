@@ -98,26 +98,5 @@ public class VariantController {
         }
     }
 
-//    @GetMapping("/get-variant/{id}")
-//    @ResponseBody
-//    public ResponseEntity<Variant> getVariantDetails(@PathVariable("id") String id) {
-//        try {
-//            Long variantId = Long.parseLong(id);
-//            Optional<Variant> optionalVariant = variantService.getVariantById(variantId);
-//
-//            if (optionalVariant.isPresent()) {
-//                Variant variant = optionalVariant.get();
-//
-//                return ResponseEntity.ok(variant);
-//            } else {
-//                return ResponseEntity.notFound().build();
-//            }
-//        } catch (NumberFormatException e) {
-//            return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
-//        }
-//    }
 }
 

@@ -51,9 +51,7 @@ public class ResetPasswordController {
 
     @GetMapping("/resetPassword/{token}")
     public String resetPasswordForm(@PathVariable String token, Model model) {
-        System.out.println("Original token: " + token);
         PasswordResetToken reset = tokenRepository.findByToken(token);
-        System.out.println("Retrieved token from DB: " + reset);
         if (reset != null && tokenService.hasExpired(reset.getExpiryDateTime())) {
             model.addAttribute("email", reset.getUser().getEmail());
             return "resetPassword";

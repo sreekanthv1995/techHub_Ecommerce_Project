@@ -1,6 +1,5 @@
 package com.tech_hub.techhub.controller;
 
-import com.tech_hub.techhub.dto.ProductDto;
 import com.tech_hub.techhub.entity.Category;
 import com.tech_hub.techhub.service.category.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;

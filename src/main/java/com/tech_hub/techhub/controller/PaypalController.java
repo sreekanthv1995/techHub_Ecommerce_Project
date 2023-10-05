@@ -51,13 +51,13 @@ public class PaypalController {
     public String successPay(@RequestParam("paymentId") String paymentId,@RequestParam("payerId")String payerId){
         try {
             Payment payment = paypalService.executePaymentMethod(paymentId,payerId);
-            System.out.println(payment.toJSON());
             if (payment.getState().equals("approved")){
 
                 return "success";
             }
         }catch (PayPalRESTException e){
-            System.out.println(e.getMessage());
+            e.printStackTrace();
+
         }
         return "redirect:/";
 
