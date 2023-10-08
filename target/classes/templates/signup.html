@@ -49,25 +49,25 @@
           <h2 class="text-center mb-4">Sign up</h2>
           <form th:action="@{/signup}" method="POST" class="signup-background" id="createForm">
             <div class="mb-3 ml-5 mr-5">
-              <input type="text" class="form-control" placeholder="First Name"  name="firstName">
+              <input type="text" class="form-control" placeholder="First Name"  name="firstName" required="required">
             </div>
             <div class="mb-3 ml-5 mr-5">
-              <input type="text" class="form-control" placeholder="Last Name"  name="lastName">
+              <input type="text" class="form-control" placeholder="Last Name"  name="lastName" required="required">
             </div>
             <div class="mb-3 ml-5 mr-5">
-              <input type="text" class="form-control" placeholder="Username"  name="username">
+              <input type="text" class="form-control" placeholder="Username"  name="username" required="required">
             </div>
             <div class="mb-3 ml-5 mr-5">
-              <input type="email" class="form-control" placeholder="Email"  name="email">
+              <input type="email" class="form-control" placeholder="Email"  name="email" required="required">
             </div>
             <div class="mb-3 ml-5 mr-5">
-              <input type="number" class="form-control" placeholder="Mobile"  name="phoneNumber">
+              <input type="number" class="form-control" placeholder="Mobile"  name="phoneNumber" required="required">
             </div>
             <div class="mb-3 ml-5 mr-5">
-              <input  id="password" type="password" class="form-control" placeholder="Password"  name="password">
+              <input  id="password" type="password" class="form-control" placeholder="Password"  name="password" required="required">
             </div>
             <div class="mb-3 ml-5 mr-5">
-              <input id="confirmPassword" type="password" class="form-control" placeholder="Confirm Password" name="confirmPassword">
+              <input id="confirmPassword" type="password" class="form-control" placeholder="Confirm Password" name="confirmPassword" required="required">
             </div>
             <p th:if="${error}" class="text-danger text-center">User name or Email Already Exists!!!</p>
             <div class="mb-3 pl-5 pr-5">

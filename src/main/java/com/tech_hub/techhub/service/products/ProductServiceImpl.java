@@ -42,8 +42,7 @@ public class ProductServiceImpl implements ProductService{
     @Autowired
     CategoryService categoryService;
 
-
-    static final String UPLOAD_DIR = "/Users/sreekanth/Desktop/E-commerce Project/src/main/resources/static/productImages";
+    public static final String UPLOAD_DIR ="/home/ec2-user/E-commerce Project/src/main/resources/static/productImages";
 
     @Override
     public List<Products> getAllProducts() {

@@ -28,7 +28,6 @@ public class ProductController {
     ProductServiceImpl productService;
     @Autowired
     ProductRepository productRepository;
-    private static final String ADMIN_PRODUCTS_REDIRECT = "redirect:/admin/products";
 
 
     @GetMapping("/page/products/{pageNo}")
@@ -63,14 +62,14 @@ public class ProductController {
     public String addProducts(@ModelAttribute("productDTO") ProductDto productDto,
                               @RequestParam("productImage") List<MultipartFile> files) throws IOException {
        productService.addProduct(productDto,files);
-        return ADMIN_PRODUCTS_REDIRECT;
+        return "redirect:/admin/products";
     }
 
     @GetMapping("/products/delete/{id}")
     @PreAuthorize("hasAuthority('ROLE_ADMIN')")
     public String deleteProduct(@PathVariable Long id){
         productService.removeProductById(id);
-        return ADMIN_PRODUCTS_REDIRECT;
+        return "redirect:/admin/products";
     }
     @GetMapping("/products/edit/{id}")
     @PreAuthorize("hasAuthority('ROLE_ADMIN')")
@@ -84,7 +83,7 @@ public class ProductController {
     @PreAuthorize("hasAuthority('ROLE_ADMIN')")
     public String updateProduct(@ModelAttribute("product")ProductDto productDto){
         productService.updateProduct(productDto.getId(),productDto);
-        return ADMIN_PRODUCTS_REDIRECT;
+        return "redirect:/admin/products";
     }
 
     @GetMapping("/product/search-product")

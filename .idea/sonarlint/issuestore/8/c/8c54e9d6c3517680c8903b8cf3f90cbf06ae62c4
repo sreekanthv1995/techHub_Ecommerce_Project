@@ -1,9 +1,5 @@
 
 j
-java:S1192""HDefine a constant instead of duplicating this literal "userDto" 3 times.(¡¨×£ıÿÿÿÿ8®£½Ï¯1
+java:S1192 "HDefine a constant instead of duplicating this literal "userDto" 3 times.(¡¨×£ıÿÿÿÿ8®£½Ï¯1
 _
-java:S2441""=Make "UserDto" serializable or don't store it in the session.(¡¨×£ıÿÿÿÿ8­çÛÏ¯1
-`
-java:S1128"CRemove this unused import 'com.tech_hub.techhub.entity.UserEntity'.(ËÛÛ´8µçÛÏ¯1
-Q
-java:S1128"/Remove this unused import 'java.util.Optional'.(¨˜ëİüÿÿÿÿ8µçÛÏ¯1
+java:S2441 "=Make "UserDto" serializable or don't store it in the session.(¡¨×£ıÿÿÿÿ8­çÛÏ¯1

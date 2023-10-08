@@ -8,6 +8,7 @@ import com.tech_hub.techhub.util.EmailUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import javax.mail.MessagingException;
@@ -29,8 +30,8 @@ public class TokenServiceImpl implements TokenService{
 
     @Override
     public String forgotPassword(String email) {
-        UserEntity user = userRepository.findByEmail(email).orElseThrow(
-                () ->new RuntimeException("user not found with email "+email));
+        userRepository.findByEmail(email).orElseThrow(
+                () ->new UsernameNotFoundException("user not found with email "+email));
 
         try {
             emailUtil.sentSetPasswordEmail(email);
@@ -62,7 +63,7 @@ public class TokenServiceImpl implements TokenService{
             message.setTo(user.getEmail());
 
             message.setSubject("Welcome to techHUB");
-            message.setText("Hello \n\n" + "Please click on this link to Reset your Password :" + resetLink + ". \n\n"
+            message.setText("Hello \n\n" + "Please click on this link to Reset your Password : " + resetLink + ". \n\n"
                     + "Regards \n" + "techHUB");
             javaMailSender.send(message);
             return "success";
@@ -98,8 +99,7 @@ public class TokenServiceImpl implements TokenService{
 
     private String getResultLink(PasswordResetToken token) {
 
-        String endPointUrl = "http://localhost:8080/resetPassword";
-        System.out.println(endPointUrl + "/" + token.getToken());
+        String endPointUrl = "https://www.techhubstore.online/resetPassword";
         return endPointUrl + "/" + token.getToken();
     }
 }
