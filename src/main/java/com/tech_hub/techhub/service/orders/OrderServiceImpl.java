@@ -185,7 +185,7 @@ public class OrderServiceImpl implements OrderService {
             try {
                 if (order.getStatus() != Status.CANCELLED && order.getPaymentMode() == COD) {
                     order.setStatus(Status.CANCELLED);
-                } else if (order.getPaymentMode() == RAZORPAY) {
+                } else if (order.getPaymentMode() == RAZORPAY || order.getPaymentMode() == WALLET) {
                     double orderPrice = order.getTotalPrice();
                     Optional<Wallet> optionalUserWallet = walletService.getWallet(user);
                     if (optionalUserWallet.isPresent()) {
@@ -243,7 +243,7 @@ public void proceedRefund(Long id) {
         Order order = returnItem.getOrder();
         UserEntity user = order.getUser();
         if (returnItem.getReturnReasons() == CancelReasons.WRONG_ITEM_RECEIVED){
-            if (order.getPaymentMode() == RAZORPAY){
+            if (order.getPaymentMode() == RAZORPAY || order.getPaymentMode() == WALLET){
                 handleRazorpayRefund(returnItem, order, user);
                 updateStock(order);
             }else {
