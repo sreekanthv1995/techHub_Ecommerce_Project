@@ -99,7 +99,7 @@ public class TokenServiceImpl implements TokenService{
 
     private String getResultLink(PasswordResetToken token) {
 
-        String endPointUrl = "https://www.techhubstore.online/resetPassword";
+        String endPointUrl = "http://www.techhubstore.online/resetPassword";
         return endPointUrl + "/" + token.getToken();
     }
 }
